@@ -19,6 +19,7 @@ function _fetchTMDB(url: string, params: Record<string, string | number | undefi
 }
 
 export function fetchTMDB(url: string, params: Record<string, string | number | undefined> = {}): Promise<any> {
+  console.log(url, params);
   const hash = ohash([url, params])
   if (!cache.has(hash)) {
     cache.set(
